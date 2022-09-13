@@ -1,9 +1,8 @@
 #include <stdio.h>
 
+/*The funtion outputs test to standard output*/
 int main (void)
 {
-	char myText[]="Programming is like building a multiligual puzzle";
-
-	puts("\"myText);
+	puts("\"Programming is like a building a multilingual puzzle");
 	return(0);
 }
