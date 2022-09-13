@@ -1,8 +1,12 @@
 #include <stdio.h>
 
-/*The funtion outputs test to standard output*/
-int main (void)
+/**
+ * main - The funtion outputs test to standard output
+ *desccription: writes text to standard output
+ *return: 0 (Success) 
+ */
+int main(void)
 {
 	puts("\"Programming is like a building a multilingual puzzle");
-	return(0);
+	return (0);
 }
