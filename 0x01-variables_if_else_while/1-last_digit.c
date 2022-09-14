@@ -37,8 +37,8 @@ int main(void)
 	} else if (n < 0)
 	{
 		int nPos;
-	        nPos = n * -1;
-	
+
+		nPos = n * -1;
 		*rePtr = (nPos % 10) * -1;
 
 		printf("%d is %d and is less than 6 and not 0\n", n, result);
