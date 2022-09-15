@@ -1,25 +1,26 @@
 #include "main.h"
 
 /**
- *main - checks if input is lower case letter
+ *print_sign - returns the sign of an integer
  *
  *Return: Always 0.
  */
 
-int _isalpha(int val)
+int print_sign(int val)
 {
 	if (val > 0)
 	{
 		_putchar('+');
-		return 1;
+		return (1);
 	} else if (val < 0)
 	{
 		_putchar('-');
-		return -1;
-	} else if (val == )
+		return (-1);
+	} else if (val == 0)
 	{
-		_putchar(0);
-		return 0;
+		_putchar('0');
+		return (0);
 	}
 
+	return (0);
 }

@@ -17,7 +17,7 @@ int main(void)
 		_putchar(func[count]);
 		count++;
 	}
-	
+
 	_putchar('\n');
 	return (0);
 }
