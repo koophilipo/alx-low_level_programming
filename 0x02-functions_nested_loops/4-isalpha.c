@@ -3,7 +3,7 @@
 /**
  *_isalpha - checks if input is lower case letter
  *
- *@val: The character to print  
+ *@val: The character to print
  *Return: Always 0.
  */
 
@@ -18,5 +18,5 @@ int _isalpha(int val)
 		return (0);
 	}
 
-	return (0);	
+	return (0);
 }

@@ -3,7 +3,7 @@
 /**
  *_abs - checks if input is lower case letter
  *
- * @inpt: The character to print  
+ *@inpt: The character to inpint
  *Return: Always 0.
  */
 
@@ -17,7 +17,7 @@ int _abs(int inpt)
 		return (absVal);
 	} else if (inpt > 0)
 	{
-		return (val);
+		return (inpt);
 	} else if (inpt == 0)
 	{
 		return (0);

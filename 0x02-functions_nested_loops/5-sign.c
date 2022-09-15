@@ -3,6 +3,7 @@
 /**
  *print_sign - returns the sign of an integer
  *
+ *@val: holds input
  *Return: Always 0.
  */
 
