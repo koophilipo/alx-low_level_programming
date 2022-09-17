@@ -8,13 +8,13 @@
  *	  1 if input is uppercase letter
  */
 
-int _isupper(char val)
+int _isupper(int val)
 {
-	if (val >= 'A' && val <= 'Z')
+	if (val >= 65 && val <= 90)
 	{
 		return (1);
 	}
-	else if (val >= 'a' && val <= 'z')
+	else if (val >= 97 && val <= 123)
 	{
 		return (0);
 	}

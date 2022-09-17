@@ -5,7 +5,7 @@
 
 void positive_or_negative(int i);
 int largest_number(int a, int b, int c);
-int _isupper(char val);
+int _isupper(int val);
 int _isdigit(char val);
 int mul(int val1, int val2);
 void print_numbers(void);
