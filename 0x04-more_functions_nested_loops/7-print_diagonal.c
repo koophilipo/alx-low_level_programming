@@ -21,10 +21,7 @@ void print_diagonal(int val)
 				{
 					_putchar('\\');
 				}
-				else
-				{
-					_putchar(' ');
-				}
+
 			}
 
 			_putchar('\n');
