@@ -9,29 +9,24 @@
 void more_numbers(void)
 {
 
-	int lpctr = 0;
+	int lpctr;
+	int val;
 
-	while (lpctr < 10)
+	for (lpctr = 0; lpctr < 10; lpctr++)
 	{
-		int count = 0;
+		val = 0;
 
-		while (count < 15)
+		for (val = 0; val < 15; val++)
 		{
-			if (count <= 9)
+			if (count > 9)
 			{
-				_putchar(count + '0');
-			}
-			else
-			{
-				_putchar((count / 10) + '0');
-				_putchar((count % 10) + '0');
+				_putchar((val / 10) + '0');
 			}
 
-			count++;
+			_putchar((val % 10) + '0');
 		}
 
 		_putchar('\n');
-		lpctr++;
 	}
 
 }
