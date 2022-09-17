@@ -10,11 +10,11 @@
 
 int _isupper(int val)
 {
-	if (val >= 65 && val <= 90)
+	if ((val >= 65) && (val <= 90))
 	{
 		return (1);
 	}
-	else if (val >= 97 && val <= 123)
+	else
 	{
 		return (0);
 	}
