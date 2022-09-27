@@ -1,1 +1,1 @@
-#This is my first project in C language
+This directory contains more functions on pointers and strings
