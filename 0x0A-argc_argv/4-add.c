@@ -9,7 +9,7 @@
  * @argv: array of string holding passed arguments
  * Return: Always 0 (success), 1 on error
  */
-int main(int argc,char *argv[])
+int main(int argc, char *argv[])
 {
 	int i = 1;
 	int j;
@@ -20,7 +20,7 @@ int main(int argc,char *argv[])
 		printf("%d\n", 0);
 		return (0);
 	}
-	while(i < argc)
+	while (i < argc)
 	{
 		j = 0;
 
