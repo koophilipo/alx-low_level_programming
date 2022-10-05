@@ -22,7 +22,6 @@ int main(int argc, char *argv[])
 	}
 	for (i = 1; i < argc; i++)
 	{
-	
 		for (j = 0; argv[i][j] != '\0'; j++)
 		{
 			if (isdigit(argv[i][j]) == 0 && argv[i][j] != '-')
@@ -32,7 +31,6 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
-
 	total += atoi(argv[1]) * atoi(argv[2]);
 	printf("%d\n", total);
 	return (0);
