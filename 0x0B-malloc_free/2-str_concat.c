@@ -71,12 +71,11 @@ void strcp(char *val1, char *val2)
 
 char *str_concat(char *s1, char *s2)
 {
-	int i, v1, v2;
+	int v1, v2;
+	static char *newStr;
 
 	v1 = _strlen(s1);
 	v2 = _strlen(s2);
-	static char *newStr;
-
 	newStr = (char *)malloc(sizeof(char) * (v1 + v2 + 1));
 	if (newStr == NULL)
 	{
