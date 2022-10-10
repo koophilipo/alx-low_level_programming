@@ -49,7 +49,7 @@ int **alloc_grid(int width, int height)
 	{
 		return ((int **)NULL);
 	}
-	arrGrid = (int **)malloc(sizeof(int **) * width);
+	arrGrid = (int **)malloc(sizeof(int **) * (width - 1));
 	if (arrGrid == NULL)
 	{
 		return ((int **)NULL);
