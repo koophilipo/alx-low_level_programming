@@ -61,14 +61,14 @@ int **alloc_grid(int width, int height)
 		{
 			z += 0;
 			j = 1;
-			while (z >= 0)
+			/*while (z >= 0)
 			{
 				if (z > 0)
 				{
 					free(arrGrid[z]);
 					z--;
 				}
-			}
+			}*/
 			break;
 		}
 		z++;
