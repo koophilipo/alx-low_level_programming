@@ -1,3 +1,6 @@
+#ifndef DOG_H
+#define DOG_H
+
 /**
  * dog - contains elements of a dog
  *
@@ -11,3 +14,5 @@ struct dog
 	float age;
 	char *owner;
 };
+
+#endif
