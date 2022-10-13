@@ -2,13 +2,13 @@
 #define DOG_H
 
 /**
- * dog - contains elements of a dog
+ * struct dog - contains elements of a dog
  *
  * Description: variables group of a dog
  *
  * @name: string
  * @age: decimal integer
- * owner: string
+ * @owner: string
  */
 struct dog
 {
