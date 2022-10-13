@@ -4,6 +4,8 @@
 /**
  * dog - contains elements of a dog
  *
+ * Description: variables group of a dog
+ *
  * @name: string
  * @age: decimal integer
  * owner: string
