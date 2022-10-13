@@ -5,7 +5,7 @@
 /**
  * print_dog - prints the values of the elements of struct pointer
  *
- * @d: struct pointer 
+ * @d: struct pointer
  */
 void print_dog(struct dog *d)
 {
@@ -19,7 +19,7 @@ void print_dog(struct dog *d)
 		{
 			printf("Name: (nil)\n");
 		}
-		if (d->age != '\0' && d->age > 0)
+		if (d->age != '\0' && d->age >= 0)
 		{
 			printf("Age: %f\n", d->age);
 		}
