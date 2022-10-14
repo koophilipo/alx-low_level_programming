@@ -44,7 +44,7 @@ void _strcp(char *val1, char *val2)
 }
 
 /**
- * dog_t new_dog - creates a new struct dog
+ * new_dog - creates a new struct dog
  *
  * @name: string
  * @age: float integer
@@ -60,7 +60,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	newDog = &nDog;
 
-	if (name == NULL || owner == NULL || age <= 0)
+	if (name == NULL || owner == NULL || age <= 0 || age = '\0' || 
+			name[0] == '\0' || owner[0] == '\0')
 	{
 		return (NULL);
 	}
