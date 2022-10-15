@@ -9,6 +9,7 @@
 void print_name(char *name, void (*f)(char *))
 {
 	void (*func)(char *);
+
 	if (f != NULL && name != NULL)
 	{
 		func = f;
