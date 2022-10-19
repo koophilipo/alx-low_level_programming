@@ -1,14 +1,14 @@
 #include "variadic_functions.h"
 
 /**
- *  * print_sep - prints string to std out
- *   * @btwn: string
- *    */
+ * print_sep - prints string to std out
+ * @btwn: string
+ */
 void print_sep(const char *btwn)
 {
-        if (btwn != NULL)
-        {
-                while (*btwn != '\0')
+	if (btwn != NULL)
+	{
+		while (*btwn != '\0')
 		{
 			printf("%c", *btwn);
 			btwn++;
