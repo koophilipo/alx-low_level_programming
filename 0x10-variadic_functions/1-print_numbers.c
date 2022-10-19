@@ -42,9 +42,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			{
 				print_sep(separator);
 			}
-			else
-			{
-				putchar('\n');
-			}
 	}
+	putchar('\n');
 }
