@@ -31,12 +31,12 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_start(val, n);
 	for (i = 0; i < n; i++)
 	{
-			j = va_arg(val, int);
-			printf("%d", j);
-			if (i != (n - 1))
-			{
-				print_sep(separator);
-			}
+		j = va_arg(val, int);
+		printf("%d", j);
+		if (i != (n - 1))
+		{
+			print_sep(separator);
+		}
 	}
 	putchar('\n');
 }
