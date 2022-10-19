@@ -28,11 +28,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	int j;
 	va_list val;
 
-	if (n == 0)
-	{
-		exit(0);
-	}
-
 	va_start(val, n);
 	for (i = 0; i < n; i++)
 	{
