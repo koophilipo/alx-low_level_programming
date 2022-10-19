@@ -7,10 +7,11 @@
 /**
  * print_s - print to std output
  * @s: string
+ * Return: Always 0 (success), -1 (fail)
  */
 int print_s(char *s)
 {
-	if (s != NULL)
+	while (s != NULL)
 	{
 		printf("%s", s);
 		return (0);
@@ -55,32 +56,36 @@ void print_f(double f)
 void print_all(const char * const format, ...)
 {
 	int i = 0;
-	va_list val;
 
-	va_start(val, format);
-	while (format[i] != '\0')
+	if (format != NULL)
 	{
-		switch (format[i])
+		va_list val;
+
+		va_start(val, format);
+		while (format[i] != '\0' && format != NULL)
 		{
-			case 'c':
-				print_c(va_arg(val, int));
-				break;
-			case 'i':
-				print_i(va_arg(val, int));
-				break;
-			case 'f':
-				print_f(va_arg(val, double));
-				break;
-			case 's':
-				print_s(va_arg(val, char*));
-				break;
+			switch (format[i])
+			{
+				case 'c':
+					print_c(va_arg(val, int));
+					break;
+				case 'i':
+					print_i(va_arg(val, int));
+					break;
+				case 'f':
+					print_f(va_arg(val, double));
+					break;
+				case 's':
+					print_s(va_arg(val, char*));
+					break;
+			}
+			if (END_ARRAY && FLAGS)
+			{
+				printf(", ");
+			}
+			i++;
 		}
-		if (END_ARRAY && FLAGS)
-		{
-			printf(", ");
-		}
-		i++;
+		va_end(val);
 	}
-	va_end(val);
 	printf("\n");
 }
