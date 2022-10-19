@@ -7,8 +7,8 @@
  */
 int sum_them_all(const unsigned int n, ...)
 {
-	int i;
-	va_list val;
+	unsigned int i;
+	va_list val, check;
 	int sum = 0;
 
 	if (n == 0)
@@ -16,15 +16,19 @@ int sum_them_all(const unsigned int n, ...)
 		return (0);
 	}
 
+	va_start(check, n);
 	va_start(val, n);
 
 	for (i = 0; i < n; i++)
 	{
-		if ((va_arg(val, int)) != '\0')
+		int j = va_arg(check, int);
+		printf("check: %d\n", j); 
+		if (j != '\0')
 		{
 			sum += va_arg(val, int);
 		}
 	}
+	va_end(check);
 	va_end(val);
 	return (sum);
 }
