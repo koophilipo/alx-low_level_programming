@@ -49,14 +49,14 @@ int **alloc_grid(int width, int height)
 	{
 		return ((int **)NULL);
 	}
-	arrGrid = (int **)malloc(sizeof(int **) * (width - 1));
+	arrGrid = (int **)malloc(sizeof(int *) * (width));
 	if (arrGrid == NULL)
 	{
 		return ((int **)NULL);
 	}
 	while (z < height)
 	{
-		arrGrid[z] = (int *)malloc(sizeof(int *) * (height - 1));
+		arrGrid[z] = (int *)malloc(sizeof(int) * (height));
 		if (arrGrid[z] == NULL)
 		{
 			z += 0;
