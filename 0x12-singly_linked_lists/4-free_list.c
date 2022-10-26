@@ -8,8 +8,10 @@
 void free_list(list_t *head)
 {
 	list_t *nhead;
+	list_t *traverse;
+	list_t *temp;
+
 	nhead = head;
-	list_t *traverse, *temp;
 
 	if (head != NULL)
 	{
