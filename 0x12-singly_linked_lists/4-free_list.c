@@ -8,12 +8,10 @@
 void free_list(list_t *head)
 {
 	list_t *traverse;
-	list_t *temp;
-
 	traverse = head;
 	while (traverse != NULL)
 	{
-		temp = traverse;
+		list_t *temp = traverse;
 		traverse = traverse->next;
 		free(temp);
 	}
