@@ -13,6 +13,7 @@ list_t *add_first(list_t **head, char *str)
 	new = (list_t *)malloc(sizeof(list_t));
 	if (new == NULL)
 	{
+		free(str);
 		return (NULL);
 	}
 	new->str = str;
@@ -37,6 +38,7 @@ list_t *add_next(list_t **head, char *str)
 	new = (list_t *)malloc(sizeof(list_t));
 	if (new == NULL)
 	{
+		free(str);
 		return (NULL);
 	}
 
