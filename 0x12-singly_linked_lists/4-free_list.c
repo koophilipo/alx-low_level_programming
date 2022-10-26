@@ -7,8 +7,9 @@
  */
 void free_list(list_t *head)
 {
-	list_t *nhead = head;
-	list_t *traverse, temp;
+	list_t *nhead;
+	nhead = head;
+	list_t *traverse, *temp;
 
 	if (head != NULL)
 	{
