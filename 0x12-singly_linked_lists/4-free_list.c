@@ -8,7 +8,7 @@
 void free_list(list_t *head)
 {
 	list_t *nhead = head;
-	list_t *traverse;
+	list_t *traverse, temp;
 
 	if (head != NULL)
 	{
@@ -19,9 +19,10 @@ void free_list(list_t *head)
 			{
 				traverse = traverse->next;
 			}
-			free((traverse->next));
+			temp = traverse->next;
 			traverse->next = NULL;
+			free(temp);
 		}
-		free(nhead);
+		free(head);
 	}
 }
