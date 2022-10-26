@@ -8,31 +8,29 @@
 size_t print_list(const list_t *h)
 {
 	int count = 0;
-	list_t *new;
+	list_t *newt;
 
 	if (h == NULL)
 	{
 		return (0);
 	}
 
-	new = (list_t *)malloc(sizeof(list_t));
-	new->str = h->str;
-	new->len = h->len;
-	new->next = h->next;
+	newt = (list_t *)malloc(sizeof(list_t));
+	newt->str = h->str;
+	newt->len = h->len;
+	newt->next = h->next;
 
 	while (h)
 	{
 		count++;
-		printf("[%u] ", (new->str) ? new->len : 0);
-		printf("%s\n", (new->str) ? new->str : "(nil)");
+		printf("[%u] ", (newt->str) ? newt->len : 0);
+		printf("%s\n", ((newt->str) ? newt->str : "(nil)"));
 
-		if (new->next == NULL)
+		if (newt->next == NULL)
 		{
 			break;
 		}
-		new = new->next;
+		newt = newt->next;
 	}
-
-	free(new);
 	return (count);
 }
