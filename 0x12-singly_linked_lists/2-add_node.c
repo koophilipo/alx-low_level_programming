@@ -25,7 +25,7 @@ list_t *add_first(list_t **head, char *str)
 
 
 /**
- * add_node_start - adds a new node to a list
+ * add_node - adds a new node to a list
  * @head: pointer to first node
  * @str: string
  * Return: list_t pointer (success), NULL (fail)
