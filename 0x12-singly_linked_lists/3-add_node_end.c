@@ -70,7 +70,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	}
 
-	strg = (char *)malloc(sizeof(list_t));
+	strg = (char *)malloc(sizeof(char) * (strlen(str) + 1));
 	if (strg == NULL)
 	{
 		return (NULL);
