@@ -8,7 +8,7 @@
 size_t print_list(const list_t *h)
 {
 	int count = 0;
-	list_t *newt;
+	list_t *newt, *temp;
 
 	if (h == NULL)
 	{
@@ -19,6 +19,7 @@ size_t print_list(const list_t *h)
 	newt->str = h->str;
 	newt->len = h->len;
 	newt->next = h->next;
+	temp = newt;
 
 	while (h)
 	{
@@ -32,5 +33,6 @@ size_t print_list(const list_t *h)
 		}
 		newt = newt->next;
 	}
+	free(temp);
 	return (count);
 }

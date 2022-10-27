@@ -12,6 +12,7 @@ void free_list(list_t *head)
 	while (traverse != NULL)
 	{
 		list_t *temp = traverse;
+		free(traverse->str);
 		traverse = traverse->next;
 		free(temp);
 	}
