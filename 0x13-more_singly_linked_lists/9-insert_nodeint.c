@@ -17,7 +17,14 @@ listint_t *add_firstint(listint_t **head, int n)
 	}
 
 	new->n = n;
-	new->next = NULL;
+	if (*head != NULL)
+	{
+		new->next = *head;
+	}
+	else
+	{
+		new->next = NULL;
+	}
 	*head = new;
 	return (new);
 }
