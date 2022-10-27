@@ -18,7 +18,7 @@ size_t print_listint(const listint_t *h)
 	new = (listint_t *)malloc(sizeof(listint_t));
 	if (new == NULL)
 	{
-		return(0);
+		return (0);
 	}
 
 	new->n = h->n;
