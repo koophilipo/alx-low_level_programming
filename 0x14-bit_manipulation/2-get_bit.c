@@ -8,7 +8,7 @@
 int index_range(unsigned long int n)
 {
 	unsigned int j, c = 0, range = 0;
-	unsigned long int = 549755813888;
+	unsigned long int bin_mask = 549755813888;
 
 	for (j = 0; j <= 39; j++)
 	{
@@ -33,7 +33,7 @@ int index_range(unsigned long int n)
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int j, c = 0;
+	unsigned int j, c = 0;
 	unsigned int idx = index_range(n);
 	unsigned long int bin_mask = 549755813888;
 
@@ -57,4 +57,5 @@ int get_bit(unsigned long int n, unsigned int index)
 			}
 		}
 	}
+	return (-1);
 }
