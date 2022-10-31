@@ -12,7 +12,7 @@ void print_binary(unsigned long int n)
 
 	if (n == 0)
 	{
-		printf("%c", '0');
+		printf("0");
 	}
 	for (j = 0; j <= 31; j++)
 	{
@@ -22,7 +22,14 @@ void print_binary(unsigned long int n)
 			continue;
 		}
 		c = 1;
-		printf("%c", (n & bin_mask ? '1' : '0'));
+		if (n & bin_mask)
+		{
+			printf("1");
+		}
+		else
+		{
+			printf("0");
+		}
 		bin_mask >>= 1;
 	}
 }
