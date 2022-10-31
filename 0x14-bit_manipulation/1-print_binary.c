@@ -14,7 +14,7 @@ void print_binary(unsigned long int n)
 	{
 		printf("0");
 	}
-	for (j = 0; j <= 40; j++)
+	for (j = 0; j <= 39; j++)
 	{
 		if (!(n & bin_mask) && c == 0)
 		{
