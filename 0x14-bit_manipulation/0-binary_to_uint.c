@@ -146,7 +146,7 @@ unsigned int binary_to_uint(const char *d)
 		new++;
 	}
 	len = _strlen(new);
-	if (*new == '\0' || len > 31 || len == 0)
+	if (*new == '\0' || len > 32 || len == 0)
 	{
 		return (0);
 	}
