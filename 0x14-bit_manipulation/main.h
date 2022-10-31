@@ -12,5 +12,6 @@ int _strlen(const char *str);
 char *_strdup(const char *d);
 unsigned int binary_to_uint(const char *b);
 int _putchar(int c);
+void print_binary(unsigned long int n);
 
 #endif
