@@ -10,7 +10,7 @@ int _pow(unsigned int z, unsigned int p)
 {
 	int i = 0;
 	int b = z;
-	int comp = p;
+	unsigned int comp = p;
 
 	if (p == 0)
 	{
@@ -93,8 +93,18 @@ char *_strdup(const char *d)
 int convert_bin_decimal(char *str)
 {
 	int base;
-	int i = 0;
+	int i = 0, j = 0;
 	int len = _strlen(str);
+
+	while (str[j] != '\0')
+	{
+		if ((str[j] >= 'a' && str[j] <= 'z') ||
+				(str[j] >= 'A' && str[j] <= 'Z'))
+		{
+			return (i);
+		}
+		j++;
+	}
 
 	base = 2;
 	while (len > 0)
@@ -119,9 +129,9 @@ int convert_bin_decimal(char *str)
  * @d: binary number
  * Return: value in decimal
  */
-int binary_to_uint(const char *d)
+unsigned int binary_to_uint(const char *d)
 {
-	int i, conv, len;
+	int conv, len;
 	char *new, *temp;
 
 	if (d == NULL)
@@ -129,7 +139,6 @@ int binary_to_uint(const char *d)
 		return (0);
 	}
 
-	i = 0;
 	len = _strlen(d);
 	new = _strdup(d);
 	temp = new;
