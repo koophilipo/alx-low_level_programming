@@ -37,9 +37,13 @@ int get_bit(unsigned long int n, unsigned int index)
 	unsigned int idx = index_range(n);
 	unsigned long int bin_mask = 549755813888;
 
-	if (n == 0 || index > idx - 1)
+	if (n == 0 || index > 40)
 	{
 		return (-1);
+	}
+	else if (index > idx - 1)
+	{
+		return (0);
 	}
 	else
 	{
