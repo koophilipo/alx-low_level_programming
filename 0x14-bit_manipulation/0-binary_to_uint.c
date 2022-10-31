@@ -139,14 +139,14 @@ unsigned int binary_to_uint(const char *d)
 		return (0);
 	}
 
-	len = _strlen(d);
 	new = _strdup(d);
 	temp = new;
 	while (*new != '1' && *new != '\0')
 	{
 		new++;
 	}
-	if (*new == '\0' || len > 31)
+	len = _strlen(new);
+	if (*new == '\0' || len > 31 || len == 0)
 	{
 		return (0);
 	}
