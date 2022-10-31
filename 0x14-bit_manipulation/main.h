@@ -13,5 +13,7 @@ char *_strdup(const char *d);
 unsigned int binary_to_uint(const char *b);
 int _putchar(int c);
 void print_binary(unsigned long int n);
+int get_bit(unsigned long int n, unsigned int index);
+int index_range(unsigned long int n);
 
 #endif
