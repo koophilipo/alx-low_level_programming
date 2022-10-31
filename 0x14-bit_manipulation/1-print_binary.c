@@ -14,22 +14,25 @@ void print_binary(unsigned long int n)
 	{
 		printf("0");
 	}
-	for (j = 0; j <= 31; j++)
+	else
 	{
-		if (!(n & bin_mask) && c == 0)
+		for (j = 0; j <= 31; j++)
 		{
+			if (!(n & bin_mask) && c == 0)
+			{
+				bin_mask >>= 1;
+				continue;
+			}
+			c = 1;
+			if (n & bin_mask)
+			{
+				printf("1");
+			}
+			else
+			{
+				printf("0");
+			}
 			bin_mask >>= 1;
-			continue;
 		}
-		c = 1;
-		if (n & bin_mask)
-		{
-			printf("1");
-		}
-		else
-		{
-			printf("0");
-		}
-		bin_mask >>= 1;
 	}
 }
