@@ -10,7 +10,7 @@ void print_binary(unsigned long int n)
 	int j, c = 0;
 	long int bin_mask = 549755813888;
 
-	if (n == 0)
+	if (n == 0 || n > 4294967295)
 	{
 		printf("0");
 	}
