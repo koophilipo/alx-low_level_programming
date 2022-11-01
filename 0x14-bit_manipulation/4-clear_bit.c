@@ -42,7 +42,7 @@ int _pow1(unsigned int z, unsigned int p)
  * @index: index to set bit
  * Return: 1 (success), -1 (fail)
  */
-int set_bit(unsigned long int *p, unsigned int index)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned int j;
 
@@ -51,6 +51,6 @@ int set_bit(unsigned long int *p, unsigned int index)
 		return (-1);
 	}
 	j = _pow1(2, index);
-	*p = *p | j;
+	*n = *n ^ j;
 	return (j);
 }

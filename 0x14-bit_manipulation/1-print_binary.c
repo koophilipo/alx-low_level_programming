@@ -8,15 +8,15 @@
 void print_binary(unsigned long int n)
 {
 	int j, c = 0;
-	long int bin_mask = 549755813888;
+	long int bin_mask = 4611686018427387904;
 
-	if (n == 0 || n > 4294967295)
+	if (n == 0)
 	{
 		printf("0");
 	}
 	else
 	{
-		for (j = 0; j <= 39; j++)
+		for (j = 0; j <= 63; j++)
 		{
 			if (!(n & bin_mask) && c == 0)
 			{
