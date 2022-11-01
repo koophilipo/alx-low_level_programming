@@ -16,7 +16,7 @@ void print_binary(unsigned long int n)
 	}
 	else
 	{
-		for (j = 0; j <= 63; j++)
+		for (j = 0; j <= 62; j++)
 		{
 			if (!(n & bin_mask) && c == 0)
 			{
