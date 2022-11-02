@@ -47,12 +47,14 @@ void error_check(int i, int f, const char *str)
  */
 void cp(const char *file1, const char *file2)
 {
-	int i, j, c, z, e, t, p;
+	int i, j, z, e, t, p;
 	mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 	int max_read = sizeof(char) * 1024;
 	int byte_read = 0;
-	char arr[1025];
+	char *arr;
+	int c = sizeof(char) * 1025;
 
+	arr = (char *)malloc(sizeof(char) * 1025);
 	i = open(file1, O_RDONLY);
 	error_check(i, 1, file1);
 	j = open(file2, O_WRONLY | O_CREAT | O_TRUNC, mode);
@@ -70,6 +72,7 @@ void cp(const char *file1, const char *file2)
 	close_check(e, i);
 	p = close(j);
 	close_check(p, j);
+	free(arr);
 }
 
 int main(int ac, char **av)
