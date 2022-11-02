@@ -54,6 +54,11 @@ void cp(const char *file1, const char *file2)
 	char *arr;
 	int c = sizeof(char) * 1025;
 
+	if (file2 == NULL)
+	{
+		error_check(-1, 2, file2);
+	}
+
 	arr = (char *)malloc(sizeof(char) * 1025);
 	i = open(file1, O_RDONLY);
 	error_check(i, 1, file1);
@@ -87,11 +92,6 @@ int main(int ac, char **av)
 	if (ac != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp %s %s\n", "file_from", "file_to\n");
-		exit(97);
-	}
-	if (av[2] == NULL)
-	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	cp(av[1], av[2]);
