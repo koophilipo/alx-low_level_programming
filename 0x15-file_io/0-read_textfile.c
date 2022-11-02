@@ -10,38 +10,20 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int i = 1, j = 0;
-	unsigned int p = 1, count = 0;
+	int i = 0;
+	unsigned int c = 0;
 	FILE *buff = NULL;
-	FILE *fptr = NULL;
 
 	buff = fopen(filename, "r");
-	fptr = fopen(filename, "r");
-	if (buff == NULL || fptr == NULL)
+	if(buff == NULL)
 	{
 		return (0);
 	}
-	while ((j = fgetc(fptr)) != EOF)
+	while ((i = fgetc(buff)) != EOF && c < letters)
 	{
-		count++;
-	}
-	fclose(fptr);
-	if (letters > count)
-	{
-		while (p < count - 1)
-		{
-			i = fgetc(buff);
-			putchar(i);
-			p++;
-		}
-		return (count);
-	}
-	while (p < letters)
-	{
-		i = fgetc(buff);
 		putchar(i);
-		p++;
+		c++;
 	}
 	fclose(buff);
-	return (letters);
+	return (c);
 }
