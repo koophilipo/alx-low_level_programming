@@ -9,12 +9,13 @@
 int create_file(const char *filename, char *text_content)
 {
 	int i, len = 0, j;
+	mode_t mode = S_IRUSR | S_IWUSR;
 
 	if (filename == NULL)
 	{
 		return (-1);
 	}
-	j = open(filename, O_WRONLY | O_CREAT | O_TRUNC);
+	j = open(filename, O_WRONLY | O_CREAT, mode);
 	if (j < 0)
 	{
 		return (-1);
@@ -26,7 +27,7 @@ int create_file(const char *filename, char *text_content)
 	}
 	for (i = 0; text_content[i] != '\0'; i++)
 	{
-		len += write(j, &text_content[i], sizeof(char));
+		len += write(j, &text_content[i], 1);
 	}
 	if (len < 1)
 	{
