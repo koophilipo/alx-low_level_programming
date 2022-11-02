@@ -86,7 +86,7 @@ int main(int ac, char **av)
 {
 	if (ac != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp %s %s\n", "file_from", "file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp %s %s\n", "file_from", "file_to");
 		exit(97);
 	}
 	cp(av[1], av[2]);
