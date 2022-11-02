@@ -54,11 +54,6 @@ void cp(const char *file1, const char *file2)
 	char *arr;
 	int c = sizeof(char) * 1025;
 
-	if (file2 == NULL)
-	{
-		error_check(-1, 2, file2);
-	}
-
 	arr = (char *)malloc(sizeof(char) * 1025);
 	i = open(file1, O_RDONLY);
 	error_check(i, 1, file1);
