@@ -21,7 +21,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	while ((i = fgetc(buff)) != EOF && c < letters)
 	{
-		putchar(i);
+		write(STDOUT_FILENO, &i, sizeof(char));
 		c++;
 	}
 	fclose(buff);
