@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/stat.h>
+#include <sys/types.h>
 #include <fcntl.h>
 #include <unistd.h>
 
@@ -65,7 +66,7 @@ void cp(const char *file1, const char *file2)
 	arr = (char *)malloc(sizeof(char) * 1025);
 	i = open(file1, O_RDONLY);
 	error_check1(i, file1);
-	j = open(file2, O_WRONLY | O_CREAT | O_TRUNC, mode);
+	j = open(file2, O_RDWR | O_CREAT | O_TRUNC, mode);
 	error_check2(j, file2);
 
 	for (z = 0; c >= max_read; z++)
