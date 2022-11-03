@@ -20,19 +20,27 @@ void close_check(int i, int j)
 
 
 /**
- * error_check - exits program if checks are true
- * @i: value to perform check on
- * @f: file descriptor value
+ * error_check1 - exits program if checks are true
+ * @i: value to perform check one
  * @str: filename passed
  */
-void error_check(int i, int f, const char *str)
+void error_check1(int i, const char *str)
 {
-	if (i < 0 && f == 1)
+	if (i < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", str);
 		exit(98);
 	}
-	else if (i < 0 && f == 2)
+}
+
+/**
+ * error_check2 - exits program if checks are true
+ * @t: value to perform check on
+ * @str: filename passed
+ */
+void error_check2(int t, char *str)
+{
+	if (t < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", str);
 		exit(99);
@@ -56,17 +64,17 @@ void cp(const char *file1, const char *file2)
 
 	arr = (char *)malloc(sizeof(char) * 1025);
 	i = open(file1, O_RDONLY);
-	error_check(i, 1, file1);
+	error_check1(i, file1);
 	j = open(file2, O_WRONLY | O_CREAT | O_TRUNC, mode);
-	error_check(j, 2, file2);
+	error_check2(j, file2);
 
 	for (z = 0; c >= max_read; z++)
 	{
 		c = read(i, arr, max_read);
-		error_check(c, 1, file1);
+		error_check1(c, file1);
 		byte_read = c;
 		t = write(j, arr, byte_read);
-		error_check(t, 2, file2);
+		error_check2(t, file2);
 	}
 	e = close(i);
 	close_check(e, i);
