@@ -38,7 +38,7 @@ void error_check1(int i, const char *str)
  * @t: value to perform check on
  * @str: filename passed
  */
-void error_check2(int t, char *str)
+void error_check2(int t, const char *str)
 {
 	if (t < 0)
 	{
