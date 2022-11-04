@@ -64,9 +64,13 @@ void cp(const char *file1, const char *file2)
 	int c = sizeof(char) * 1025;
 
 	arr = (char *)malloc(sizeof(char) * 1025);
+	if (arr == NULL)
+	{
+		exit(98);
+	}
 	i = open(file1, O_RDONLY);
 	error_check1(i, file1);
-	j = open(file2, O_RDWR | O_CREAT | O_TRUNC, mode);
+	j = open(file2, O_WRONLY | O_CREAT | O_TRUNC, mode);
 	error_check2(j, file2);
 
 	for (z = 0; c >= max_read; z++)
@@ -74,11 +78,8 @@ void cp(const char *file1, const char *file2)
 		c = read(i, arr, max_read);
 		error_check1(c, file1);
 		byte_read = c;
-		if ((t = write(j, arr, byte_read)) < 0 )
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file2);
-			exit(99);
-		}
+		t = write(j, arr, byte_read);
+		error_check2(t, file2);
 	}
 	e = close(i);
 	close_check(e, i);
