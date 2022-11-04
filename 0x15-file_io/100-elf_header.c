@@ -37,7 +37,7 @@ int main(int ac __attribute__((unused)), char **av)
 	i = system(str);
 	if (i < 0)
 	{
-		printf("command failed\n");
+		exit(98);
 	}
 	return (0);
 }
