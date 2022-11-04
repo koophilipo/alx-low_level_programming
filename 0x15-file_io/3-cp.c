@@ -76,7 +76,7 @@ void cp(const char *file1, const char *file2)
 		byte_read = c;
 		if ((t = write(j, arr, byte_read)) < 0 )
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", str);
+			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file2);
 			exit(99);
 		}
 	}
