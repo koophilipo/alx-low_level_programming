@@ -74,8 +74,11 @@ void cp(const char *file1, const char *file2)
 		c = read(i, arr, max_read);
 		error_check1(c, file1);
 		byte_read = c;
-		t = write(j, arr, byte_read);
-		error_check2(t, file2);
+		if ((t = write(j, arr, byte_read)) < 0 )
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", str);
+			exit(99);
+		}
 	}
 	e = close(i);
 	close_check(e, i);
