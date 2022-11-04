@@ -43,7 +43,7 @@ void error_check2(int t, const char *str)
 {
 	if (t < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", str);
+		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", ((str[0] == '\0') ? "\"\"" : str));
 		exit(99);
 	}
 }
@@ -97,7 +97,7 @@ void cp(const char *file1, const char *file2)
 
 int main(int ac, char **av)
 {
-	if (ac != 3 || av[2][0] == '\0')
+	if (ac != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp %s %s\n", "file_from", "file_to");
 		exit(97);
