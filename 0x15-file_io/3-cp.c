@@ -43,7 +43,7 @@ void error_check2(int t, const char *str)
 {
 	if (t < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", ((str[0] == '\0') ? "\"\"" : str));
+		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", ((str[0] == '\0') ? "\" \"" : str));
 		exit(99);
 	}
 }
