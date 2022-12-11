@@ -19,7 +19,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	}
 
 	traverse = head;
-	for (i = 0; i <= index; i++)
+	for (i = 0; i <= index && traverse != NULL; i++)
 	{
 		if (i == index)
 		{
