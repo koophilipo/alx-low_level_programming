@@ -32,7 +32,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		{
 			if (traverse->prev == NULL)
 			{
-				add_dnodeint(h, n);
+				new_node->prev = NULL;
+				new_node->next = traverse;
+				traverse->prev = new_node;
+				*h = new_node;
 			}
 			else
 			{
