@@ -45,6 +45,7 @@ int main(void)
 			}
 			if (temp > 0)
 			{
+				printf("%d\n", temp);
 				if (temp > result)
 				{
 					result = temp;
