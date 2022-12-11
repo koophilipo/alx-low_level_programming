@@ -45,8 +45,12 @@ int main(void)
 			}
 			if (temp > 0)
 			{
-				result = temp;
+				if (temp > result)
+				{
+					result = temp;
+				}
 			}
+			free(int_str);
 		}
 	}
 	printf("largest palindrome: %d\n", result);
