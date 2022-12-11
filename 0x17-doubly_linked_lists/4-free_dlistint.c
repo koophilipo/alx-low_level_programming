@@ -2,7 +2,7 @@
 
 
 /**
- * free_dlintint - frees a dlistint_t list
+ * free_dlistint - frees a dlistint_t list
  * @head: pointer to the first node
  *
  * Return: Nothing
