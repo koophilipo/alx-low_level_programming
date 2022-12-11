@@ -24,23 +24,23 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (NULL);
 	}
 
-	traverse = *h;
-	new_node->n = n;
+	traverse = *h, new_node->n = n;
+	if (traverse == NULL)
+	{
+		free(new_node), new_node = add_dnodeint(h, n);
+	}
 	for (i = 0; i <= idx && traverse != NULL; i++)
 	{
 		if (i == idx)
 		{
 			if (traverse->prev == NULL)
 			{
-				free(new_node);
-				new_node = add_dnodeint(h, n);
+				free(new_node), new_node = add_dnodeint(h, n);
 			}
 			else
 			{
-				new_node->prev = traverse->prev;
-				new_node->next = traverse;
-				traverse->prev = new_node;
-				new_node->prev->next = new_node;
+				new_node->prev = traverse->prev, new_node->next = traverse;
+				traverse->prev = new_node, new_node->prev->next = new_node;
 			}
 			return (new_node);
 		}
